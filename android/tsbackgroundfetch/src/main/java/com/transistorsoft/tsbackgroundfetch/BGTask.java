@@ -25,7 +25,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class BGTask {
-    static int MAX_TIME = 60000;
+    public static int MAX_TIME = 60000;
 
     private static final List<BGTask> mTasks = new ArrayList<>();
 
@@ -71,7 +71,7 @@ public class BGTask {
     private Runnable mTimeoutTask;
     private boolean mTimedout = false;
 
-    BGTask(final Context context, String taskId, FetchJobService.CompletionHandler handler, int jobId) {
+    public BGTask(final Context context, String taskId, FetchJobService.CompletionHandler handler, int jobId) {
         mTaskId = taskId;
         mCompletionHandler = handler;
         mJobId = jobId;

@@ -210,7 +210,7 @@ public class BackgroundFetch {
         return mFetchCallback;
     }
 
-    void onFetch(final BGTask task) {
+    public void onFetch(final BGTask task) {
         BGTask.addTask(task);
         Log.d(TAG, "- Background Fetch event received: " + task.getTaskId());
         synchronized (mConfig) {
